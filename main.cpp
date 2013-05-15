@@ -2,11 +2,12 @@
 and may not be redistributed without written permission.*/
 
 //The headers
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
+#include "SDL.h"
+#include "SDL_image.h"
 #include "Timer.h"
 #include "Particle.h"
 #include "Dot.h"
+#include "Block.h"
 #include <string>
 #include <cstdlib>
 
@@ -72,7 +73,10 @@ int main( int argc, char* args[] )
 
     //The dot that will be used
     Dot myDot(screen);
-
+    SDL_Surface *block_image = load_image("imag/block.png");
+    Block *block = new Block(100,100,100,50, block_image, screen,&myDot);
+    Block *block2 = new Block(500,300,100,50, block_image, screen,&myDot);
+    Block *block1 = new Block(20,400,100,50, block_image, screen,&myDot);
     //While the user hasn't quit
     while( quit == false )
     {
@@ -96,10 +100,24 @@ int main( int argc, char* args[] )
         //Move the dot
         myDot.move();
 
+        block->logic();
+        block2->logic();
+        block1->logic();
+
         //Fill the screen white
         SDL_FillRect( screen, &screen->clip_rect, SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
 
+        if (block->dotCollides())
+            delete block;
+        if (block1->dotCollides())
+            delete block1;
+        if (block2->dotCollides())
+            delete block2;
+
         //Show the dot on the screen
+        block->show();
+        block2->show();
+        block1->show();
         myDot.show();
 
         //Update the screen
