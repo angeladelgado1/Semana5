@@ -41,55 +41,181 @@
 	<string>
 	<cstdlib>
 
-1368207347 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\dot.cpp
+1368408025 source:c:\users\immac\documents\github\semana5\dot.cpp
 	"Dot.h"
 
-1368209308 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\dot.h
+1368209348 c:\users\immac\documents\github\semana5\dot.h
 	<cmath>
 	"Utility.h"
 	"Particle.h"
 
-1368208382 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\utility.h
+1368208269 c:\users\immac\documents\github\semana5\utility.h
 	"SDL.h"
 	"SDL_image.h"
 	"Timer.h"
 	<string>
 
-1368205138 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\timer.h
+1368205136 c:\users\immac\documents\github\semana5\timer.h
 	"SDL.h"
 
-1368205138 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\particle.h
+1368205136 c:\users\immac\documents\github\semana5\particle.h
 	"SDL.h"
 	"SDL_image.h"
 	"Utility.h"
 	<string>
 	<cstdlib>
 
-1368558769 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\main.cpp
+1368472933 source:c:\users\immac\documents\github\semana5\main.cpp
 	"SDL.h"
 	"SDL_image.h"
 	"Timer.h"
 	"Particle.h"
 	"Dot.h"
-	"Block.h"
+	<string>
+	<cstdlib>
+	"block.h"
+
+1368205049 source:c:\users\immac\documents\github\semana5\particle.cpp
+	"Particle.h"
+
+1368205049 source:c:\users\immac\documents\github\semana5\timer.cpp
+	"Timer.h"
+
+1368205049 source:c:\users\immac\documents\github\semana5\utility.cpp
+	"Utility.h"
+
+1368473303 source:c:\users\immac\documents\github\semana5\block.cpp
+	"block.h"
+
+1368472418 c:\users\immac\documents\github\semana5\block.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	"Dot.h"
+
+1368464640 source:c:\users\immac\documents\github\semana5\paddle.cpp
+	"paddle.h"
+
+1368465051 c:\users\immac\documents\github\semana5\paddle.h
+	"block.h"
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\block.cpp
+	"block.h"
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\block.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	"Dot.h"
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\utility.h
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	<string>
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\timer.h
+	"SDL.h"
+
+1369400349 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\dot.h
+	<cmath>
+	"Utility.h"
+	"Particle.h"
+	<iostream>
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\particle.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
 	<string>
 	<cstdlib>
 
-1368205043 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\particle.cpp
+1369402088 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\dot.cpp
+	"Dot.h"
+
+1369400914 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	"Particle.h"
+	"Dot.h"
+	<string>
+	<cstdlib>
+	"block.h"
+	<list>
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\paddle.cpp
+	"paddle.h"
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\paddle.h
+	"block.h"
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\particle.cpp
 	"Particle.h"
 
-1368205043 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\timer.cpp
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\timer.cpp
 	"Timer.h"
 
-1368207031 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\utility.cpp
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5-master\utility.cpp
 	"Utility.h"
 
-1368570806 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\block.cpp
-	"Block.h"
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\block.cpp
+	"block.h"
 
-1368209957 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\block.h
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\block.h
 	"SDL.h"
 	"SDL_image.h"
 	"Utility.h"
 	"Dot.h"
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\utility.h
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	<string>
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\timer.h
+	"SDL.h"
+
+1369400349 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\dot.h
+	<cmath>
+	"Utility.h"
+	"Particle.h"
+	<iostream>
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\particle.h
+	"SDL.h"
+	"SDL_image.h"
+	"Utility.h"
+	<string>
+	<cstdlib>
+
+1369402168 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\dot.cpp
+	"Dot.h"
+
+1369400914 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\main.cpp
+	"SDL.h"
+	"SDL_image.h"
+	"Timer.h"
+	"Particle.h"
+	"Dot.h"
+	<string>
+	<cstdlib>
+	"block.h"
+	<list>
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\paddle.cpp
+	"paddle.h"
+
+1368470394 c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\paddle.h
+	"block.h"
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\particle.cpp
+	"Particle.h"
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\timer.cpp
+	"Timer.h"
+
+1368470394 source:c:\users\owner\desktop\escritorio\u\2013\ii periodo\labprograiii\semana5\utility.cpp
+	"Utility.h"
 

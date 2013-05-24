@@ -6,8 +6,8 @@
 #include "Timer.h"
 #include <string>
 
-    const int SCREEN_WIDTH = 640;
-    const int SCREEN_HEIGHT = 480;
+const int SCREEN_WIDTH = 640;
+const int SCREEN_HEIGHT = 480;
 
 SDL_Surface *load_image( std::string filename );
 

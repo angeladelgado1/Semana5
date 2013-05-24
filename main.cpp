@@ -7,13 +7,15 @@ and may not be redistributed without written permission.*/
 #include "Timer.h"
 #include "Particle.h"
 #include "Dot.h"
-#include "Block.h"
 #include <string>
 #include <cstdlib>
+#include "block.h"
+#define PI 3.14159265
+#include <list>
 
+using namespace std;
 //The surfaces
-//const int SCREEN_WIDTH = 640;
-//const int SCREEN_HEIGHT = 480;
+
 const int SCREEN_BPP = 32;
 
 //The frame rate
@@ -73,13 +75,19 @@ int main( int argc, char* args[] )
 
     //The dot that will be used
     Dot myDot(screen);
-    SDL_Surface *block_image = load_image("imag/block.png");
-    Block *block = new Block(100,100,100,50, block_image, screen,&myDot);
-    Block *block2 = new Block(500,300,100,50, block_image, screen,&myDot);
-    Block *block1 = new Block(20,400,100,50, block_image, screen,&myDot);
+    SDL_Surface *block_image = load_image("block.png");
+    Block *block = new Block(200,200,100,25,block_image,screen,&myDot);
+    Block *block2 = new Block(300,225,100,25,block_image,screen,&myDot);
+    list <Block*> block_list;
+    block_list.push_back(block);
+    block_list.push_back(block2);
+     block2->life =3;
+
     //While the user hasn't quit
     while( quit == false )
     {
+
+        myDot.dotMoves();
         //Start the frame timer
         fps.start();
 
@@ -98,27 +106,57 @@ int main( int argc, char* args[] )
         }
 
         //Move the dot
+
         myDot.move();
 
-        block->logic();
-        block2->logic();
-        block1->logic();
+        list<Block*>::iterator block_iterator = block_list.begin();
+        while(block_iterator != block_list.end())
+        {
+            Block* block_temp = *block_iterator;
+            block_temp->logic();
+            //((Block*)(*block_iterator))->logic();
+            if (block_temp->life <= 0)
+            {
+                block_list.erase(block_iterator);
+                block_iterator--;
+            }
+            block_iterator++;
+        }
+
+//        if (block->life <= 0){
+//                delete block;
+ //               block = 0;
+//            }
+
+//        if (block2 != 0){
+//        block2->logic();
+//        if (block2->life <= 0){
+//            delete block2;
+//            block2 = 0;
+ //       }
+ //       }
+
 
         //Fill the screen white
         SDL_FillRect( screen, &screen->clip_rect, SDL_MapRGB( screen->format, 0xFF, 0xFF, 0xFF ) );
 
-        if (block->dotCollides())
-            delete block;
-        if (block1->dotCollides())
-            delete block1;
-        if (block2->dotCollides())
-            delete block2;
-
         //Show the dot on the screen
-        block->show();
-        block2->show();
-        block1->show();
         myDot.show();
+
+        block_iterator = block_list.begin();
+        while(block_iterator != block_list.end())
+        {
+            Block* block_temp = *block_iterator;
+            block_temp->show();
+            block_iterator++;
+        }
+
+      /*  if (block != 0){
+        block->show();
+        }
+        if (block2 != 0){
+        block2->show();
+        }*/
 
         //Update the screen
         if( SDL_Flip( screen ) == -1 )

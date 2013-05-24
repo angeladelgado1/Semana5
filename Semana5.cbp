@@ -32,8 +32,6 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="Block.cpp" />
-		<Unit filename="Block.h" />
 		<Unit filename="Dot.cpp" />
 		<Unit filename="Dot.h" />
 		<Unit filename="Particle.cpp" />
@@ -42,7 +40,11 @@
 		<Unit filename="Timer.h" />
 		<Unit filename="Utility.cpp" />
 		<Unit filename="Utility.h" />
+		<Unit filename="block.cpp" />
+		<Unit filename="block.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="paddle.cpp" />
+		<Unit filename="paddle.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

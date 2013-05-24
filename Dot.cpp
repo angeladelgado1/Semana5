@@ -20,6 +20,7 @@ Dot::Dot(SDL_Surface *screen)
 
     angle = -45;
     velocity = 5;
+    this->isMove = false;
 
     //Initialize particles
     for( int p = 0; p < TOTAL_PARTICLES; p++ )
@@ -77,8 +78,12 @@ void Dot::handle_input()
 
 void Dot::move()
 {
+    int temp;
     this->x += (cos (angle*PI/180) * velocity );
     this->y -= sin (angle*PI/180) * velocity;
+
+    if (this->isMove)
+        this->isMove = false;
 
     if( ( x < 0 ) || ( x + DOT_WIDTH > SCREEN_WIDTH ) )
     {
@@ -89,6 +94,7 @@ void Dot::move()
     {
         angle=-angle;
     }
+
 }
 
 void Dot::show_particles()
@@ -124,4 +130,49 @@ void Dot::show()
 
     //Show the particles
     show_particles();
+}
+
+void Dot::dotMoves()
+{
+
+    SDL_Event event;
+    //Quit flag
+        //If there's an event to handle
+        if( SDL_PollEvent( &event ) )
+        {
+            //If a key was pressed
+            if( event.type == SDL_KEYDOWN )
+            {
+                //Set the proper message surface
+                switch( event.key.keysym.sym )
+                {
+                    case SDLK_DOWN:
+                    {
+                        this->angle = -89;
+                        this->isMove = true;
+                        break;
+                    }
+                    case SDLK_UP:
+                    {
+                        this->angle = -269;
+                        this->isMove = true;
+                        break;
+                    }
+                    case SDLK_RIGHT:
+                    {
+                        this->angle = 2;
+                        this->isMove = true;
+                        break;
+                    }
+                    case SDLK_LEFT:
+                    {
+                        this->angle = 179;
+                        this->isMove = true;
+                        break;
+                    }
+
+                }
+            }
+        }
+
 }
